@@ -51,7 +51,7 @@ public class FilesController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteFile(@PathVariable ("fileId") UUID hash) throws IOException {
         byte[] array = fileStoreService.getFile(hash);
-        //
+
         return ResponseEntity.ok("file deleted") ;
     }
 }
